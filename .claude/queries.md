@@ -3,6 +3,18 @@
 All queries run through `POST /sql` (read-only) or the `run_sql` tool.
 Only `SELECT`, `WITH`, and `EXPLAIN` are permitted.
 
+## Quick access with ! commands
+
+The UI supports direct tool commands that bypass the LLM — useful for fast data exploration:
+
+```
+!list_tables                        show all tables with row counts
+!describe_table loans               columns, types, and keys for one table
+!read_rows applicants 20            first 20 rows of applicants
+!run_sql SELECT COUNT(*) FROM loans run any read-only query inline
+!help                               show all available commands
+```
+
 ---
 
 ## Row counts
@@ -220,7 +232,7 @@ FROM loans;
 
 ---
 
-## Tips for the chat agent
+## Tips
 
 - Always join through `applicant_id` — it's the only FK connecting all three tables.
 - `loan_amount` is stored in **thousands** (e.g. `130` = $130 000).
@@ -228,3 +240,4 @@ FROM loans;
 - `loan_amount_term` is in **months** (360 = 30-year mortgage).
 - Use `NULLIF(..., 0)` when dividing by income to avoid division-by-zero.
 - Use `::numeric` before `ROUND()` to avoid float precision issues.
+- Use `!run_sql <query>` in the chat panel for instant results without LLM overhead.

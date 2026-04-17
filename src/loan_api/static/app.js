@@ -12,7 +12,7 @@ let history = [];
 const PROVIDER_LABELS = {
   anthropic: { label: "claude-sonnet-4-6",  cls: "anthropic" },
   gemini:    { label: "gemini-2.0-flash",   cls: "gemini" },
-  cerebras:  { label: "llama3.1-70b",       cls: "cerebras" },
+  cerebras:  { label: "llama3.1-8b",        cls: "cerebras" },
 };
 
 // ── Provider toggle ───────────────────────────────────────────────────────────
@@ -26,13 +26,11 @@ document.querySelectorAll(".provider-btn").forEach((btn) => {
     const meta = PROVIDER_LABELS[currentProvider];
     providerBadge.textContent = meta.label;
     providerBadge.className = `provider-badge ${meta.cls}`;
-    // Reset conversation on provider switch
     history = [];
     messagesEl.innerHTML = "";
     const notice = document.createElement("div");
     notice.className = "msg assistant";
-    notice.style.color = "var(--muted)";
-    notice.style.fontSize = "12px";
+    notice.style.cssText = "color:var(--muted);font-size:12px";
     notice.textContent = `Switched to ${meta.label}. New conversation started.`;
     messagesEl.appendChild(notice);
   });
@@ -56,9 +54,7 @@ async function refreshCounts() {
       const tile = tiles.querySelector(`[data-table="${row.name}"] .count`);
       if (tile) tile.textContent = row.row_count.toLocaleString();
     }
-  } catch (e) {
-    console.error("count refresh failed", e);
-  }
+  } catch (e) { console.error("count refresh failed", e); }
 }
 
 // ── File upload ───────────────────────────────────────────────────────────────
@@ -74,9 +70,7 @@ async function uploadFile(table, file) {
     const { inserted, skipped_duplicates, rejected_rows } = body;
     toast(`${table}: +${inserted} inserted, ${skipped_duplicates} dup, ${rejected_rows} rejected`, "ok");
     refreshCounts();
-  } catch (e) {
-    toast(`Upload failed: ${e.message}`, "err");
-  }
+  } catch (e) { toast(`Upload failed: ${e.message}`, "err"); }
 }
 
 function wireDropzone(zone) {
@@ -96,7 +90,136 @@ function wireDropzone(zone) {
 }
 document.querySelectorAll(".dropzone").forEach(wireDropzone);
 
-// ── Chat ──────────────────────────────────────────────────────────────────────
+// ── Direct ! commands (bypass LLM, call REST endpoints) ──────────────────────
+
+function pad(str, len) { return String(str ?? "").padEnd(len); }
+
+function formatTable(columns, rows) {
+  if (!rows.length) return `(0 rows)\nColumns: ${columns.join(", ")}`;
+  const widths = columns.map((c, ci) =>
+    Math.max(c.length, ...rows.map((r) => String(r[ci] ?? "").length))
+  );
+  const header = columns.map((c, i) => pad(c, widths[i])).join("  ");
+  const sep    = widths.map((w) => "─".repeat(w)).join("  ");
+  const body   = rows.map((row) =>
+    row.map((v, i) => pad(v, widths[i])).join("  ")
+  ).join("\n");
+  return `${rows.length} row${rows.length !== 1 ? "s" : ""}\n\n${header}\n${sep}\n${body}`;
+}
+
+function formatObjectTable(columns, objRows) {
+  const rows = objRows.map((r) => columns.map((c) => r[c]));
+  return formatTable(columns, rows);
+}
+
+function addCommandMessage(cmdText, output) {
+  const el = document.createElement("div");
+  el.className = "msg command";
+  const hdr = document.createElement("span");
+  hdr.className = "cmd-header";
+  hdr.textContent = `$ ${cmdText}`;
+  el.appendChild(hdr);
+  el.appendChild(document.createTextNode(output));
+  messagesEl.appendChild(el);
+  messagesEl.scrollTop = messagesEl.scrollHeight;
+}
+
+const HELP_TEXT = `Available commands:
+  !list_tables                     list all tables with row counts
+  !describe_table <table>          columns, types, keys for one table
+  !get_row_counts                  shorthand for !list_tables
+  !read_rows <table> [limit=10]    show first N rows
+  !run_sql <query>                 execute a read-only SQL query
+  !help                            show this message
+
+Tables: applicants · employment · loans`;
+
+async function handleCommand(text) {
+  const tokens = text.trim().split(/\s+/);
+  const cmd    = tokens[0].toLowerCase();
+
+  let output = "";
+  try {
+    if (cmd === "!help") {
+      output = HELP_TEXT;
+
+    } else if (cmd === "!list_tables" || cmd === "!get_row_counts") {
+      const r    = await fetch("/tables");
+      const data = await r.json();
+      if (!r.ok) { output = `Error: ${JSON.stringify(data)}`; }
+      else {
+        const widths = [
+          Math.max(5, ...data.map((t) => t.name.length)),
+          9,
+        ];
+        const header = `${"Table".padEnd(widths[0])}  Row count`;
+        const sep    = `${"─".repeat(widths[0])}  ${"─".repeat(widths[1])}`;
+        const rows   = data.map((t) => `${t.name.padEnd(widths[0])}  ${t.row_count.toLocaleString()}`);
+        output = [header, sep, ...rows].join("\n");
+        refreshCounts();
+      }
+
+    } else if (cmd === "!describe_table") {
+      const table = tokens[1];
+      if (!table) { output = "Usage: !describe_table <table>"; }
+      else {
+        const r    = await fetch(`/tables/${table}/schema`);
+        const data = await r.json();
+        if (!r.ok) { output = `Error: ${data.detail || JSON.stringify(data)}`; }
+        else {
+          const cols = data.columns.map((c) => {
+            const flags = [
+              c.primary_key  ? "PK" : "",
+              c.foreign_key  ? `FK→${c.foreign_key}` : "",
+              !c.nullable    ? "NOT NULL" : "",
+            ].filter(Boolean).join(" ");
+            return [c.name, c.type, flags];
+          });
+          output = formatTable(["Column", "Type", "Constraints"], cols);
+          output = `Table: ${data.name}\n\n` + output;
+        }
+      }
+
+    } else if (cmd === "!read_rows") {
+      const table = tokens[1];
+      const limit = parseInt(tokens[2]) || 10;
+      if (!table) { output = "Usage: !read_rows <table> [limit]"; }
+      else {
+        const r    = await fetch(`/tables/${table}/rows?limit=${limit}`);
+        const data = await r.json();
+        if (!r.ok) { output = `Error: ${data.detail || JSON.stringify(data)}`; }
+        else if (!data.rows.length) { output = "No rows."; }
+        else {
+          const columns = Object.keys(data.rows[0]);
+          output = formatObjectTable(columns, data.rows);
+        }
+      }
+
+    } else if (cmd === "!run_sql") {
+      const query = tokens.slice(1).join(" ");
+      if (!query) { output = "Usage: !run_sql <query>"; }
+      else {
+        const r    = await fetch("/sql", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ query }),
+        });
+        const data = await r.json();
+        if (!r.ok || data.error) { output = `Error: ${data.error || data.detail}`; }
+        else { output = formatTable(data.columns, data.rows); }
+      }
+
+    } else {
+      output = `Unknown command: ${cmd}\nType !help to see available commands.`;
+    }
+  } catch (e) {
+    output = `Error: ${e.message}`;
+  }
+
+  addCommandMessage(text, "\n" + output);
+}
+
+// ── LLM chat ──────────────────────────────────────────────────────────────────
 
 function addMessage(role) {
   const el = document.createElement("div");
@@ -131,9 +254,9 @@ async function sendMessage(text) {
   userEl.textContent = text;
 
   const assistantEl = addMessage("assistant");
-  const toolPills = {};
-  let currentText = "";
-  let textNode = null;
+  const toolPills   = {};
+  let currentText   = "";
+  let textNode      = null;
 
   const appendText = (t) => {
     if (!textNode) { textNode = document.createElement("div"); assistantEl.appendChild(textNode); }
@@ -142,7 +265,6 @@ async function sendMessage(text) {
     messagesEl.scrollTop = messagesEl.scrollHeight;
   };
 
-  // Provider badge inline label
   const badge = document.createElement("span");
   badge.className = `provider-badge ${PROVIDER_LABELS[currentProvider].cls}`;
   badge.style.cssText = "float:right;margin-left:8px;font-size:10px;";
@@ -158,7 +280,7 @@ async function sendMessage(text) {
     });
     if (!res.ok) { assistantEl.textContent = `Error: ${res.status} ${res.statusText}`; return; }
 
-    const reader = res.body.getReader();
+    const reader  = res.body.getReader();
     const decoder = new TextDecoder();
     let buf = "";
     while (true) {
@@ -204,12 +326,18 @@ async function sendMessage(text) {
   }
 }
 
+// ── Form submit ───────────────────────────────────────────────────────────────
+
 composer.addEventListener("submit", (e) => {
   e.preventDefault();
   const text = input.value.trim();
   if (!text) return;
   input.value = "";
-  sendMessage(text);
+  if (text.startsWith("!")) {
+    handleCommand(text);
+  } else {
+    sendMessage(text);
+  }
 });
 
 input.addEventListener("keydown", (e) => {

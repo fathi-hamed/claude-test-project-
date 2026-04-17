@@ -112,6 +112,15 @@
     background: var(--panel-2); border: 1px solid #fb923c;
     color: #fb923c; margin: 4px 0; display: inline-block;
   }
+  .msg.command {
+    background: #0c0f1d; border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    align-self: stretch; max-width: 100%;
+    font-family: "Cascadia Code", "Fira Code", "Consolas", monospace;
+    font-size: 12px; white-space: pre; overflow-x: auto;
+    color: #c8d0ff;
+  }
+  .cmd-header { color: var(--accent); margin-bottom: 6px; display: block; font-weight: 600; }
 </style>
 </head>
 <body>
@@ -163,7 +172,8 @@
       <textarea id="input" placeholder="Ask about the data (e.g. 'average loan amount by education')" required></textarea>
       <button id="send" type="submit">Send</button>
     </form>
-    <p class="hint">Both models have read-only SQL + ingest_from_path tools. Switch providers anytime — conversation resets on switch.</p>
+    <p class="hint">Both models have read-only SQL + ingest_from_path tools. Switch providers anytime — conversation resets on switch.<br>
+    Type <code style="background:var(--panel-2);padding:1px 4px;border-radius:3px">!help</code> for direct tool commands that bypass the LLM.</p>
   </section>
 </main>
 <div id="toasts"></div>
