@@ -10,8 +10,9 @@ let currentProvider = "anthropic";
 let history = [];
 
 const PROVIDER_LABELS = {
-  anthropic: { label: "claude-sonnet-4-6", cls: "anthropic" },
-  gemini:    { label: "gemini-2.0-flash",  cls: "gemini" },
+  anthropic: { label: "claude-sonnet-4-6",  cls: "anthropic" },
+  gemini:    { label: "gemini-2.0-flash",   cls: "gemini" },
+  cerebras:  { label: "llama3.1-70b",       cls: "cerebras" },
 };
 
 // ── Provider toggle ───────────────────────────────────────────────────────────
@@ -179,6 +180,12 @@ async function sendMessage(text) {
         } else if (event.type === "tool_result") {
           const pill = toolPills[event.id];
           if (pill) pill.classList.add(event.ok ? "ok" : "err");
+        } else if (event.type === "info") {
+          const info = document.createElement("div");
+          info.className = "info-pill";
+          info.textContent = event.message;
+          assistantEl.appendChild(info);
+          messagesEl.scrollTop = messagesEl.scrollHeight;
         } else if (event.type === "error") {
           const err = document.createElement("div");
           err.className = "tool-pill err";

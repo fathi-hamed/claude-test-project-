@@ -9,6 +9,8 @@ class Settings(BaseSettings):
     anthropic_model: str = "claude-sonnet-4-6"
     gemini_api_key: str = ""
     gemini_model: str = "gemini-2.0-flash"
+    cerebras_api_key: str = ""
+    cerebras_model: str = "llama3.1-70b"
     uploads_dir: str = "/uploads"
 
     model_config = SettingsConfigDict(env_file=".env", extra="ignore")
