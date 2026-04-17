@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "loan-data": {
+      "command": "docker",
+      "args": [
+        "run", "-i", "--rm",
+        "--network", "claude-project_default",
+        "-e", "API_BASE_URL=http://loan_api:8000",
+        "claude-project-loan_api",
+        "python", "-m", "loan_mcp.server"
+      ]
+    }
+  }
+}
