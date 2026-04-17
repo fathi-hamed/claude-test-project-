@@ -1,0 +1,44 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: loan_postgres
+    environment:
+      POSTGRES_USER: loan_app
+      POSTGRES_PASSWORD: loan_app_pw
+      POSTGRES_DB: loan_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - loan_pg_data:/var/lib/postgresql/data
+      - ./scripts/init_db.sql:/docker-entrypoint-initdb.d/00_init.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U loan_app -d loan_db"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  loan_api:
+    build: .
+    container_name: loan_api
+    env_file:
+      - .env
+    environment:
+      DATABASE_URL: postgresql+psycopg2://loan_app:loan_app_pw@postgres:5432/loan_db
+      READONLY_DATABASE_URL: postgresql+psycopg2://loan_reader:loan_reader_pw@postgres:5432/loan_db
+      ALLOW_SQL_WRITES: "false"
+      UPLOADS_DIR: /uploads
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./uploads:/uploads:ro
+    depends_on:
+      postgres:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "python -c \"import urllib.request,sys; sys.exit(0 if urllib.request.urlopen('http://localhost:8000/health').status==200 else 1)\""]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  loan_pg_data:

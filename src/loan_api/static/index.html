@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Loan Data Console</title>
+<style>
+  :root {
+    --bg: #0f1220;
+    --panel: #171a2e;
+    --panel-2: #1f2340;
+    --text: #e6e8ff;
+    --muted: #8a90bf;
+    --accent: #7c8cff;
+    --ok: #4ade80;
+    --err: #f87171;
+    --border: #2a2f52;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, Segoe UI, Roboto, Ubuntu, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+  }
+  h1 { font-size: 20px; margin: 0; }
+  header {
+    padding: 16px 24px;
+    border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    padding: 16px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  @media (max-width: 900px) { main { grid-template-columns: 1fr; } }
+  section {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px;
+  }
+  section h2 { font-size: 14px; margin: 0 0 12px; text-transform: uppercase; color: var(--muted); letter-spacing: 0.05em; }
+  .tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+  .tile { background: var(--panel-2); border: 1px solid var(--border); border-radius: 8px; padding: 12px; }
+  .tile .name { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em; }
+  .tile .count { font-size: 24px; font-weight: 600; margin-top: 4px; }
+  .dropzones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 12px; }
+  .dropzone {
+    border: 1.5px dashed var(--border);
+    border-radius: 8px;
+    padding: 16px 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.15s;
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .dropzone:hover, .dropzone.drag { border-color: var(--accent); color: var(--text); background: var(--panel-2); }
+  .dropzone .table-name { font-weight: 600; color: var(--text); font-size: 14px; display: block; margin-bottom: 4px; }
+  #toasts { position: fixed; bottom: 16px; right: 16px; display: flex; flex-direction: column; gap: 8px; z-index: 50; }
+  .toast { background: var(--panel-2); border: 1px solid var(--border); border-radius: 8px; padding: 10px 14px; max-width: 360px; font-size: 13px; }
+  .toast.ok { border-color: var(--ok); }
+  .toast.err { border-color: var(--err); }
+  .chat { display: flex; flex-direction: column; min-height: 500px; height: calc(100vh - 100px); }
+  #messages { flex: 1; overflow-y: auto; padding-right: 6px; display: flex; flex-direction: column; gap: 10px; }
+  .msg { padding: 10px 12px; border-radius: 8px; line-height: 1.45; white-space: pre-wrap; word-break: break-word; }
+  .msg.user { background: var(--panel-2); align-self: flex-end; max-width: 85%; }
+  .msg.assistant { background: transparent; border: 1px solid var(--border); align-self: flex-start; max-width: 95%; }
+  .tool-pill {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 12px; padding: 4px 8px; border-radius: 999px;
+    background: var(--panel-2); border: 1px solid var(--border);
+    color: var(--muted); margin: 6px 4px 2px 0;
+  }
+  .tool-pill.ok { border-color: var(--ok); color: var(--ok); }
+  .tool-pill.err { border-color: var(--err); color: var(--err); }
+  .tool-pill code { font-size: 11px; color: var(--text); }
+  form#composer { display: flex; gap: 8px; margin-top: 12px; }
+  textarea {
+    flex: 1; min-height: 44px; max-height: 160px; resize: vertical;
+    padding: 10px; border-radius: 8px; border: 1px solid var(--border);
+    background: var(--panel-2); color: var(--text); font: inherit;
+  }
+  button {
+    padding: 0 16px; border-radius: 8px; border: none;
+    background: var(--accent); color: #0a0d1c; font-weight: 600; cursor: pointer;
+  }
+  button:disabled { opacity: 0.5; cursor: not-allowed; }
+  .hint { color: var(--muted); font-size: 12px; margin-top: 8px; }
+  .provider-bar {
+    display: flex; align-items: center; gap: 6px; margin-bottom: 12px;
+    font-size: 13px; color: var(--muted);
+  }
+  .provider-btn {
+    padding: 4px 12px; border-radius: 6px; border: 1px solid var(--border);
+    background: transparent; color: var(--muted); font: inherit; cursor: pointer;
+    transition: all 0.12s;
+  }
+  .provider-btn.active { border-color: var(--accent); color: var(--text); background: var(--panel-2); }
+  .provider-badge { font-size: 11px; padding: 2px 6px; border-radius: 4px; background: var(--panel-2); border: 1px solid var(--border); }
+  .provider-badge.anthropic { border-color: #7c8cff; color: #7c8cff; }
+  .provider-badge.gemini { border-color: #4ade80; color: #4ade80; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Loan Data Console</h1>
+  <span class="hint">FastAPI + PostgreSQL · Claude chat inline</span>
+</header>
+<main>
+  <section>
+    <h2>Row counts</h2>
+    <div class="tiles" id="tiles">
+      <div class="tile" data-table="applicants"><div class="name">applicants</div><div class="count">—</div></div>
+      <div class="tile" data-table="employment"><div class="name">employment</div><div class="count">—</div></div>
+      <div class="tile" data-table="loans"><div class="name">loans</div><div class="count">—</div></div>
+    </div>
+
+    <h2 style="margin-top:20px">Upload CSV / Excel</h2>
+    <div class="dropzones">
+      <label class="dropzone" data-table="applicants">
+        <span class="table-name">applicants</span>
+        drop file or click
+        <input type="file" accept=".csv,.xlsx,.xls" hidden />
+      </label>
+      <label class="dropzone" data-table="employment">
+        <span class="table-name">employment</span>
+        drop file or click
+        <input type="file" accept=".csv,.xlsx,.xls" hidden />
+      </label>
+      <label class="dropzone" data-table="loans">
+        <span class="table-name">loans</span>
+        drop file or click
+        <input type="file" accept=".csv,.xlsx,.xls" hidden />
+      </label>
+    </div>
+    <p class="hint">Files are POSTed directly to /ingest/&lt;table&gt;. Browser bytes never go through the chat.</p>
+  </section>
+
+  <section class="chat">
+    <h2>Chat</h2>
+    <div class="provider-bar">
+      Provider:
+      <button class="provider-btn active" data-provider="anthropic">Claude (Anthropic)</button>
+      <button class="provider-btn" data-provider="gemini">Gemini (Google)</button>
+      <span id="provider-badge" class="provider-badge anthropic">claude-sonnet-4-6</span>
+    </div>
+    <div id="messages"></div>
+    <form id="composer">
+      <textarea id="input" placeholder="Ask about the data (e.g. 'average loan amount by education')" required></textarea>
+      <button id="send" type="submit">Send</button>
+    </form>
+    <p class="hint">Both models have read-only SQL + ingest_from_path tools. Switch providers anytime — conversation resets on switch.</p>
+  </section>
+</main>
+<div id="toasts"></div>
+<script src="/static/app.js"></script>
+</body>
+</html>

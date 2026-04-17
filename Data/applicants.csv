@@ -1,0 +1,1001 @@
+applicant_id,gender,married,dependents,education
+A00001,Male,No,1,Graduate
+A00002,Female,No,2,Graduate
+A00003,Female,Yes,1,Graduate
+A00004,Female,Yes,2,Graduate
+A00005,Male,Yes,1,Not Graduate
+A00006,Female,No,1,Not Graduate
+A00007,Male,No,3+,Graduate
+A00008,Female,Yes,1,Not Graduate
+A00009,Female,No,0,Graduate
+A00010,Male,Yes,3+,Graduate
+A00011,Male,Yes,2,Not Graduate
+A00012,Female,No,3+,Not Graduate
+A00013,Female,No,1,Graduate
+A00014,Male,No,2,Graduate
+A00015,Male,Yes,3+,Not Graduate
+A00016,Female,Yes,3+,Graduate
+A00017,Female,Yes,3+,Not Graduate
+A00018,Male,Yes,2,Not Graduate
+A00019,Male,No,0,Graduate
+A00020,Female,Yes,3+,Graduate
+A00021,Female,No,1,Not Graduate
+A00022,Male,No,1,Graduate
+A00023,Male,Yes,3+,Not Graduate
+A00024,Male,Yes,0,Graduate
+A00025,Female,No,3+,Graduate
+A00026,Male,Yes,2,Not Graduate
+A00027,Female,Yes,0,Graduate
+A00028,Female,Yes,1,Not Graduate
+A00029,Male,No,2,Graduate
+A00030,Male,Yes,3+,Not Graduate
+A00031,Male,Yes,1,Graduate
+A00032,Female,No,1,Not Graduate
+A00033,Male,Yes,0,Not Graduate
+A00034,Male,No,3+,Not Graduate
+A00035,Female,Yes,3+,Not Graduate
+A00036,Male,No,3+,Graduate
+A00037,Male,Yes,1,Graduate
+A00038,Male,No,0,Graduate
+A00039,Female,No,0,Not Graduate
+A00040,Male,No,2,Not Graduate
+A00041,Male,No,0,Not Graduate
+A00042,Male,Yes,2,Not Graduate
+A00043,Female,No,2,Graduate
+A00044,Male,Yes,3+,Graduate
+A00045,Female,Yes,1,Not Graduate
+A00046,Female,No,0,Not Graduate
+A00047,Female,Yes,1,Not Graduate
+A00048,Male,Yes,1,Graduate
+A00049,Female,No,2,Not Graduate
+A00050,Male,Yes,1,Graduate
+A00051,Female,No,2,Not Graduate
+A00052,Female,Yes,1,Not Graduate
+A00053,Male,No,2,Graduate
+A00054,Female,No,3+,Not Graduate
+A00055,Female,No,2,Graduate
+A00056,Female,No,0,Graduate
+A00057,Female,Yes,2,Not Graduate
+A00058,Male,Yes,1,Graduate
+A00059,Female,Yes,0,Not Graduate
+A00060,Male,Yes,2,Graduate
+A00061,Female,Yes,3+,Not Graduate
+A00062,Male,No,0,Not Graduate
+A00063,Male,No,0,Not Graduate
+A00064,Female,No,0,Not Graduate
+A00065,Male,Yes,0,Not Graduate
+A00066,Female,No,0,Graduate
+A00067,Female,No,2,Graduate
+A00068,Male,No,2,Not Graduate
+A00069,Female,No,2,Not Graduate
+A00070,Male,Yes,3+,Not Graduate
+A00071,Male,No,0,Not Graduate
+A00072,Female,Yes,2,Not Graduate
+A00073,Female,Yes,1,Not Graduate
+A00074,Female,Yes,1,Not Graduate
+A00075,Male,No,0,Not Graduate
+A00076,Female,Yes,3+,Graduate
+A00077,Male,No,2,Graduate
+A00078,Female,Yes,0,Graduate
+A00079,Male,No,1,Not Graduate
+A00080,Female,Yes,2,Graduate
+A00081,Male,No,0,Graduate
+A00082,Female,No,2,Graduate
+A00083,Male,Yes,3+,Graduate
+A00084,Male,Yes,2,Not Graduate
+A00085,Male,No,2,Graduate
+A00086,Female,Yes,3+,Not Graduate
+A00087,Male,Yes,3+,Graduate
+A00088,Male,Yes,0,Graduate
+A00089,Male,Yes,0,Not Graduate
+A00090,Female,No,1,Not Graduate
+A00091,Male,No,3+,Not Graduate
+A00092,Female,Yes,0,Not Graduate
+A00093,Female,Yes,1,Graduate
+A00094,Male,No,0,Graduate
+A00095,Female,No,3+,Graduate
+A00096,Female,Yes,1,Not Graduate
+A00097,Female,No,3+,Not Graduate
+A00098,Male,No,1,Not Graduate
+A00099,Female,Yes,1,Not Graduate
+A00100,Female,Yes,3+,Not Graduate
+A00101,Male,No,3+,Graduate
+A00102,Female,No,3+,Not Graduate
+A00103,Male,No,2,Not Graduate
+A00104,Male,Yes,2,Not Graduate
+A00105,Male,Yes,3+,Graduate
+A00106,Female,Yes,1,Graduate
+A00107,Female,Yes,2,Graduate
+A00108,Female,Yes,0,Not Graduate
+A00109,Male,Yes,0,Not Graduate
+A00110,Female,No,3+,Graduate
+A00111,Female,Yes,3+,Not Graduate
+A00112,Female,Yes,0,Graduate
+A00113,Female,No,1,Not Graduate
+A00114,Female,Yes,3+,Graduate
+A00115,Female,Yes,3+,Not Graduate
+A00116,Female,No,1,Not Graduate
+A00117,Female,No,2,Not Graduate
+A00118,Male,Yes,0,Not Graduate
+A00119,Male,Yes,3+,Graduate
+A00120,Female,Yes,2,Graduate
+A00121,Male,No,1,Not Graduate
+A00122,Male,Yes,1,Graduate
+A00123,Male,Yes,0,Not Graduate
+A00124,Male,No,3+,Graduate
+A00125,Female,No,2,Graduate
+A00126,Male,No,2,Graduate
+A00127,Male,No,1,Not Graduate
+A00128,Female,No,2,Not Graduate
+A00129,Female,Yes,1,Not Graduate
+A00130,Female,No,1,Graduate
+A00131,Male,No,3+,Not Graduate
+A00132,Male,No,3+,Not Graduate
+A00133,Female,Yes,3+,Graduate
+A00134,Male,Yes,3+,Not Graduate
+A00135,Male,No,0,Graduate
+A00136,Female,No,3+,Not Graduate
+A00137,Female,No,0,Graduate
+A00138,Female,No,0,Not Graduate
+A00139,Male,Yes,2,Graduate
+A00140,Male,No,3+,Graduate
+A00141,Male,No,1,Not Graduate
+A00142,Female,Yes,0,Graduate
+A00143,Female,No,0,Graduate
+A00144,Female,Yes,3+,Not Graduate
+A00145,Female,Yes,2,Graduate
+A00146,Male,Yes,1,Graduate
+A00147,Male,No,3+,Not Graduate
+A00148,Male,No,2,Not Graduate
+A00149,Female,Yes,2,Graduate
+A00150,Female,No,2,Not Graduate
+A00151,Female,No,3+,Not Graduate
+A00152,Female,Yes,3+,Graduate
+A00153,Male,Yes,1,Not Graduate
+A00154,Male,No,0,Graduate
+A00155,Female,Yes,2,Not Graduate
+A00156,Female,No,0,Graduate
+A00157,Female,Yes,3+,Not Graduate
+A00158,Female,No,1,Not Graduate
+A00159,Male,No,0,Not Graduate
+A00160,Male,Yes,0,Not Graduate
+A00161,Female,Yes,1,Graduate
+A00162,Male,No,2,Graduate
+A00163,Male,Yes,3+,Graduate
+A00164,Male,Yes,0,Not Graduate
+A00165,Male,Yes,0,Graduate
+A00166,Female,No,0,Not Graduate
+A00167,Female,No,3+,Graduate
+A00168,Male,Yes,1,Not Graduate
+A00169,Female,No,2,Graduate
+A00170,Male,Yes,3+,Not Graduate
+A00171,Male,Yes,1,Graduate
+A00172,Female,Yes,0,Not Graduate
+A00173,Male,Yes,0,Not Graduate
+A00174,Female,No,2,Graduate
+A00175,Female,Yes,3+,Graduate
+A00176,Male,Yes,1,Not Graduate
+A00177,Female,No,3+,Graduate
+A00178,Female,Yes,2,Graduate
+A00179,Female,Yes,0,Not Graduate
+A00180,Female,No,2,Not Graduate
+A00181,Female,Yes,3+,Not Graduate
+A00182,Male,Yes,3+,Graduate
+A00183,Male,No,3+,Not Graduate
+A00184,Male,Yes,3+,Graduate
+A00185,Male,Yes,1,Not Graduate
+A00186,Female,Yes,0,Graduate
+A00187,Male,No,2,Not Graduate
+A00188,Male,No,2,Graduate
+A00189,Male,No,1,Not Graduate
+A00190,Female,No,2,Not Graduate
+A00191,Female,Yes,1,Graduate
+A00192,Female,No,0,Not Graduate
+A00193,Female,Yes,2,Graduate
+A00194,Male,No,1,Graduate
+A00195,Female,No,0,Graduate
+A00196,Female,No,2,Not Graduate
+A00197,Male,Yes,3+,Not Graduate
+A00198,Male,Yes,2,Graduate
+A00199,Male,Yes,0,Not Graduate
+A00200,Male,No,0,Graduate
+A00201,Female,No,0,Graduate
+A00202,Male,No,2,Graduate
+A00203,Female,Yes,3+,Not Graduate
+A00204,Female,No,2,Not Graduate
+A00205,Female,No,3+,Graduate
+A00206,Female,No,2,Graduate
+A00207,Male,Yes,2,Not Graduate
+A00208,Female,No,3+,Graduate
+A00209,Male,Yes,0,Graduate
+A00210,Female,No,0,Graduate
+A00211,Male,No,3+,Graduate
+A00212,Male,Yes,3+,Not Graduate
+A00213,Female,No,1,Graduate
+A00214,Female,No,2,Graduate
+A00215,Male,No,3+,Not Graduate
+A00216,Female,No,2,Not Graduate
+A00217,Female,No,3+,Graduate
+A00218,Male,Yes,2,Graduate
+A00219,Female,No,0,Graduate
+A00220,Female,Yes,0,Not Graduate
+A00221,Male,Yes,2,Graduate
+A00222,Male,No,1,Graduate
+A00223,Male,Yes,1,Not Graduate
+A00224,Male,Yes,3+,Graduate
+A00225,Female,Yes,2,Graduate
+A00226,Male,Yes,1,Not Graduate
+A00227,Male,Yes,1,Graduate
+A00228,Male,No,3+,Graduate
+A00229,Female,No,1,Graduate
+A00230,Male,No,1,Not Graduate
+A00231,Male,No,1,Not Graduate
+A00232,Male,No,1,Graduate
+A00233,Female,Yes,0,Graduate
+A00234,Male,Yes,3+,Not Graduate
+A00235,Male,Yes,3+,Not Graduate
+A00236,Male,No,1,Graduate
+A00237,Male,No,1,Graduate
+A00238,Male,Yes,1,Graduate
+A00239,Male,No,3+,Graduate
+A00240,Male,No,2,Graduate
+A00241,Female,No,2,Not Graduate
+A00242,Female,Yes,3+,Not Graduate
+A00243,Male,Yes,3+,Graduate
+A00244,Male,No,3+,Graduate
+A00245,Male,No,1,Not Graduate
+A00246,Female,No,3+,Graduate
+A00247,Male,No,1,Graduate
+A00248,Male,No,2,Graduate
+A00249,Male,No,2,Not Graduate
+A00250,Female,No,1,Graduate
+A00251,Male,No,3+,Not Graduate
+A00252,Female,No,2,Graduate
+A00253,Female,No,2,Graduate
+A00254,Male,Yes,0,Not Graduate
+A00255,Female,No,2,Graduate
+A00256,Female,Yes,2,Graduate
+A00257,Male,No,1,Not Graduate
+A00258,Male,No,3+,Graduate
+A00259,Female,No,1,Not Graduate
+A00260,Female,No,0,Not Graduate
+A00261,Female,No,1,Not Graduate
+A00262,Male,No,0,Graduate
+A00263,Female,Yes,0,Not Graduate
+A00264,Male,No,3+,Graduate
+A00265,Female,No,2,Graduate
+A00266,Male,Yes,0,Not Graduate
+A00267,Female,No,1,Graduate
+A00268,Female,Yes,1,Graduate
+A00269,Female,No,1,Not Graduate
+A00270,Male,Yes,0,Graduate
+A00271,Female,Yes,2,Graduate
+A00272,Female,No,0,Not Graduate
+A00273,Male,No,3+,Graduate
+A00274,Male,Yes,1,Not Graduate
+A00275,Female,No,3+,Graduate
+A00276,Female,Yes,2,Not Graduate
+A00277,Male,No,1,Not Graduate
+A00278,Female,Yes,3+,Not Graduate
+A00279,Female,No,1,Not Graduate
+A00280,Male,Yes,3+,Graduate
+A00281,Female,Yes,3+,Graduate
+A00282,Female,Yes,3+,Not Graduate
+A00283,Male,No,1,Not Graduate
+A00284,Female,No,2,Not Graduate
+A00285,Male,Yes,3+,Graduate
+A00286,Female,Yes,1,Not Graduate
+A00287,Female,Yes,2,Not Graduate
+A00288,Female,No,3+,Graduate
+A00289,Male,No,2,Not Graduate
+A00290,Male,Yes,2,Graduate
+A00291,Male,No,0,Graduate
+A00292,Female,No,1,Not Graduate
+A00293,Male,No,2,Not Graduate
+A00294,Female,Yes,2,Not Graduate
+A00295,Female,Yes,2,Graduate
+A00296,Female,No,3+,Not Graduate
+A00297,Male,No,1,Not Graduate
+A00298,Female,Yes,3+,Graduate
+A00299,Male,No,3+,Not Graduate
+A00300,Male,Yes,1,Not Graduate
+A00301,Female,Yes,0,Not Graduate
+A00302,Female,No,1,Graduate
+A00303,Male,Yes,2,Graduate
+A00304,Female,No,1,Not Graduate
+A00305,Female,No,3+,Not Graduate
+A00306,Female,No,3+,Not Graduate
+A00307,Female,Yes,0,Graduate
+A00308,Male,Yes,3+,Not Graduate
+A00309,Male,Yes,0,Not Graduate
+A00310,Female,Yes,3+,Not Graduate
+A00311,Female,No,0,Graduate
+A00312,Female,No,3+,Graduate
+A00313,Male,No,3+,Graduate
+A00314,Female,Yes,3+,Not Graduate
+A00315,Female,No,2,Not Graduate
+A00316,Male,Yes,0,Graduate
+A00317,Male,No,1,Graduate
+A00318,Female,No,0,Graduate
+A00319,Female,Yes,0,Not Graduate
+A00320,Female,No,0,Not Graduate
+A00321,Female,Yes,3+,Not Graduate
+A00322,Male,No,2,Graduate
+A00323,Male,Yes,3+,Graduate
+A00324,Male,Yes,3+,Graduate
+A00325,Male,Yes,0,Not Graduate
+A00326,Female,Yes,0,Not Graduate
+A00327,Female,No,1,Graduate
+A00328,Male,Yes,0,Not Graduate
+A00329,Female,No,1,Not Graduate
+A00330,Female,No,0,Not Graduate
+A00331,Female,No,0,Not Graduate
+A00332,Male,Yes,2,Not Graduate
+A00333,Male,No,2,Graduate
+A00334,Female,No,3+,Graduate
+A00335,Female,No,0,Not Graduate
+A00336,Male,No,0,Graduate
+A00337,Female,No,1,Graduate
+A00338,Male,Yes,1,Not Graduate
+A00339,Male,Yes,2,Graduate
+A00340,Male,Yes,0,Graduate
+A00341,Male,Yes,1,Not Graduate
+A00342,Male,Yes,1,Not Graduate
+A00343,Female,Yes,0,Not Graduate
+A00344,Female,Yes,0,Graduate
+A00345,Female,Yes,2,Not Graduate
+A00346,Female,Yes,2,Not Graduate
+A00347,Female,Yes,0,Graduate
+A00348,Female,Yes,1,Not Graduate
+A00349,Male,Yes,0,Graduate
+A00350,Female,No,1,Graduate
+A00351,Female,No,0,Not Graduate
+A00352,Female,No,3+,Not Graduate
+A00353,Female,Yes,0,Graduate
+A00354,Female,No,0,Not Graduate
+A00355,Female,Yes,1,Graduate
+A00356,Female,No,1,Graduate
+A00357,Female,Yes,0,Graduate
+A00358,Female,No,3+,Not Graduate
+A00359,Male,No,2,Graduate
+A00360,Male,No,3+,Graduate
+A00361,Female,No,2,Not Graduate
+A00362,Male,Yes,1,Graduate
+A00363,Female,No,3+,Graduate
+A00364,Female,No,1,Graduate
+A00365,Female,No,3+,Not Graduate
+A00366,Male,Yes,2,Graduate
+A00367,Male,Yes,0,Graduate
+A00368,Male,No,1,Graduate
+A00369,Male,Yes,0,Graduate
+A00370,Female,No,0,Not Graduate
+A00371,Female,Yes,3+,Graduate
+A00372,Female,No,1,Not Graduate
+A00373,Male,No,1,Not Graduate
+A00374,Male,No,2,Graduate
+A00375,Male,Yes,0,Not Graduate
+A00376,Female,No,0,Graduate
+A00377,Male,Yes,0,Graduate
+A00378,Male,Yes,0,Not Graduate
+A00379,Male,Yes,0,Graduate
+A00380,Male,Yes,0,Not Graduate
+A00381,Male,No,0,Graduate
+A00382,Female,No,1,Not Graduate
+A00383,Female,No,0,Not Graduate
+A00384,Female,Yes,1,Graduate
+A00385,Male,No,2,Graduate
+A00386,Male,Yes,3+,Not Graduate
+A00387,Male,Yes,0,Graduate
+A00388,Female,No,1,Not Graduate
+A00389,Female,No,3+,Not Graduate
+A00390,Female,No,3+,Graduate
+A00391,Female,No,3+,Graduate
+A00392,Male,Yes,2,Not Graduate
+A00393,Male,No,3+,Graduate
+A00394,Male,Yes,0,Graduate
+A00395,Male,No,0,Not Graduate
+A00396,Female,No,1,Graduate
+A00397,Female,No,1,Graduate
+A00398,Female,Yes,2,Not Graduate
+A00399,Female,No,1,Not Graduate
+A00400,Male,Yes,1,Graduate
+A00401,Male,No,2,Graduate
+A00402,Male,Yes,0,Graduate
+A00403,Female,Yes,1,Not Graduate
+A00404,Male,No,3+,Not Graduate
+A00405,Female,No,0,Not Graduate
+A00406,Female,No,3+,Not Graduate
+A00407,Male,Yes,0,Graduate
+A00408,Male,Yes,3+,Not Graduate
+A00409,Female,Yes,1,Not Graduate
+A00410,Female,Yes,0,Graduate
+A00411,Female,No,0,Graduate
+A00412,Male,No,3+,Not Graduate
+A00413,Male,Yes,0,Not Graduate
+A00414,Male,Yes,3+,Graduate
+A00415,Female,Yes,3+,Not Graduate
+A00416,Male,No,2,Graduate
+A00417,Male,Yes,0,Not Graduate
+A00418,Male,No,2,Not Graduate
+A00419,Female,No,0,Graduate
+A00420,Male,No,3+,Graduate
+A00421,Male,Yes,1,Not Graduate
+A00422,Female,Yes,3+,Graduate
+A00423,Female,Yes,1,Not Graduate
+A00424,Male,No,0,Graduate
+A00425,Female,Yes,0,Not Graduate
+A00426,Male,Yes,0,Graduate
+A00427,Male,Yes,2,Not Graduate
+A00428,Female,Yes,0,Not Graduate
+A00429,Female,Yes,2,Not Graduate
+A00430,Male,No,3+,Not Graduate
+A00431,Male,No,1,Not Graduate
+A00432,Male,Yes,1,Not Graduate
+A00433,Male,No,0,Graduate
+A00434,Female,No,3+,Graduate
+A00435,Female,Yes,2,Not Graduate
+A00436,Female,Yes,0,Not Graduate
+A00437,Male,Yes,3+,Graduate
+A00438,Female,Yes,3+,Graduate
+A00439,Female,No,3+,Not Graduate
+A00440,Female,No,0,Graduate
+A00441,Female,No,1,Graduate
+A00442,Male,Yes,2,Not Graduate
+A00443,Female,No,3+,Graduate
+A00444,Male,Yes,3+,Not Graduate
+A00445,Female,No,0,Not Graduate
+A00446,Female,Yes,0,Graduate
+A00447,Male,No,0,Graduate
+A00448,Female,No,2,Graduate
+A00449,Female,Yes,2,Graduate
+A00450,Male,Yes,0,Not Graduate
+A00451,Female,No,2,Not Graduate
+A00452,Male,Yes,2,Graduate
+A00453,Female,No,3+,Not Graduate
+A00454,Female,Yes,0,Not Graduate
+A00455,Male,Yes,0,Graduate
+A00456,Female,No,0,Graduate
+A00457,Female,Yes,2,Not Graduate
+A00458,Female,Yes,0,Graduate
+A00459,Male,Yes,2,Graduate
+A00460,Male,Yes,2,Not Graduate
+A00461,Female,No,2,Graduate
+A00462,Female,No,0,Graduate
+A00463,Female,No,1,Graduate
+A00464,Male,Yes,0,Not Graduate
+A00465,Female,Yes,1,Graduate
+A00466,Female,No,1,Not Graduate
+A00467,Female,Yes,3+,Not Graduate
+A00468,Female,Yes,0,Not Graduate
+A00469,Female,No,0,Graduate
+A00470,Female,No,1,Graduate
+A00471,Male,Yes,1,Graduate
+A00472,Female,Yes,3+,Graduate
+A00473,Male,No,2,Graduate
+A00474,Male,Yes,2,Graduate
+A00475,Male,No,0,Not Graduate
+A00476,Male,Yes,2,Not Graduate
+A00477,Male,Yes,3+,Not Graduate
+A00478,Female,No,1,Not Graduate
+A00479,Female,No,0,Graduate
+A00480,Male,No,2,Graduate
+A00481,Male,No,2,Graduate
+A00482,Male,Yes,0,Not Graduate
+A00483,Male,No,1,Graduate
+A00484,Male,No,3+,Graduate
+A00485,Male,Yes,0,Not Graduate
+A00486,Male,No,3+,Not Graduate
+A00487,Male,No,3+,Graduate
+A00488,Male,No,1,Not Graduate
+A00489,Male,No,1,Graduate
+A00490,Female,Yes,2,Graduate
+A00491,Female,No,3+,Graduate
+A00492,Female,No,0,Not Graduate
+A00493,Male,Yes,3+,Not Graduate
+A00494,Female,No,1,Not Graduate
+A00495,Male,No,3+,Not Graduate
+A00496,Female,Yes,0,Graduate
+A00497,Male,Yes,3+,Graduate
+A00498,Female,Yes,1,Not Graduate
+A00499,Male,No,1,Not Graduate
+A00500,Female,No,0,Graduate
+A00501,Female,Yes,1,Not Graduate
+A00502,Male,Yes,3+,Graduate
+A00503,Female,Yes,3+,Graduate
+A00504,Male,Yes,0,Not Graduate
+A00505,Male,No,2,Graduate
+A00506,Female,No,1,Not Graduate
+A00507,Female,Yes,3+,Not Graduate
+A00508,Male,No,3+,Not Graduate
+A00509,Female,Yes,1,Not Graduate
+A00510,Female,Yes,0,Not Graduate
+A00511,Female,No,1,Not Graduate
+A00512,Female,No,2,Graduate
+A00513,Female,No,3+,Graduate
+A00514,Female,Yes,3+,Graduate
+A00515,Male,Yes,0,Graduate
+A00516,Female,No,0,Not Graduate
+A00517,Male,No,1,Not Graduate
+A00518,Female,Yes,3+,Not Graduate
+A00519,Female,Yes,3+,Graduate
+A00520,Male,No,2,Graduate
+A00521,Female,No,0,Graduate
+A00522,Male,Yes,0,Graduate
+A00523,Male,Yes,3+,Graduate
+A00524,Male,Yes,2,Not Graduate
+A00525,Male,Yes,3+,Not Graduate
+A00526,Female,No,0,Graduate
+A00527,Female,No,3+,Not Graduate
+A00528,Male,No,0,Not Graduate
+A00529,Female,No,3+,Not Graduate
+A00530,Female,Yes,2,Not Graduate
+A00531,Female,No,3+,Graduate
+A00532,Female,Yes,1,Graduate
+A00533,Female,Yes,1,Not Graduate
+A00534,Female,Yes,3+,Not Graduate
+A00535,Female,No,1,Not Graduate
+A00536,Male,Yes,2,Not Graduate
+A00537,Male,Yes,3+,Graduate
+A00538,Female,No,1,Not Graduate
+A00539,Male,Yes,0,Not Graduate
+A00540,Female,No,1,Not Graduate
+A00541,Female,Yes,1,Not Graduate
+A00542,Male,Yes,3+,Not Graduate
+A00543,Male,No,3+,Not Graduate
+A00544,Male,No,0,Not Graduate
+A00545,Male,No,3+,Not Graduate
+A00546,Female,Yes,2,Graduate
+A00547,Female,No,1,Not Graduate
+A00548,Male,No,3+,Not Graduate
+A00549,Male,No,1,Graduate
+A00550,Female,Yes,1,Graduate
+A00551,Male,Yes,1,Graduate
+A00552,Female,Yes,3+,Graduate
+A00553,Male,No,3+,Graduate
+A00554,Male,No,2,Graduate
+A00555,Female,No,3+,Not Graduate
+A00556,Male,No,1,Graduate
+A00557,Male,Yes,2,Graduate
+A00558,Female,No,1,Graduate
+A00559,Male,No,3+,Not Graduate
+A00560,Female,Yes,2,Graduate
+A00561,Male,No,2,Not Graduate
+A00562,Male,Yes,3+,Not Graduate
+A00563,Male,Yes,3+,Graduate
+A00564,Male,No,1,Not Graduate
+A00565,Female,No,3+,Graduate
+A00566,Male,No,1,Graduate
+A00567,Female,Yes,0,Graduate
+A00568,Male,No,0,Not Graduate
+A00569,Male,No,3+,Graduate
+A00570,Female,No,0,Not Graduate
+A00571,Male,No,3+,Not Graduate
+A00572,Female,No,2,Graduate
+A00573,Female,No,0,Not Graduate
+A00574,Male,No,1,Graduate
+A00575,Female,No,1,Graduate
+A00576,Female,Yes,3+,Graduate
+A00577,Female,Yes,0,Not Graduate
+A00578,Male,Yes,1,Graduate
+A00579,Male,No,2,Not Graduate
+A00580,Male,No,3+,Not Graduate
+A00581,Female,No,0,Graduate
+A00582,Male,Yes,0,Graduate
+A00583,Male,Yes,3+,Graduate
+A00584,Male,No,3+,Not Graduate
+A00585,Female,No,3+,Graduate
+A00586,Male,No,2,Graduate
+A00587,Female,Yes,3+,Not Graduate
+A00588,Female,No,1,Graduate
+A00589,Male,Yes,0,Graduate
+A00590,Female,No,1,Not Graduate
+A00591,Male,No,2,Graduate
+A00592,Male,No,1,Graduate
+A00593,Female,No,3+,Not Graduate
+A00594,Female,No,3+,Not Graduate
+A00595,Male,No,3+,Not Graduate
+A00596,Female,Yes,3+,Not Graduate
+A00597,Male,Yes,3+,Not Graduate
+A00598,Female,No,3+,Graduate
+A00599,Female,Yes,3+,Not Graduate
+A00600,Female,No,3+,Graduate
+A00601,Female,No,0,Not Graduate
+A00602,Female,Yes,2,Not Graduate
+A00603,Male,No,3+,Not Graduate
+A00604,Female,No,3+,Graduate
+A00605,Female,No,2,Not Graduate
+A00606,Male,Yes,3+,Graduate
+A00607,Female,No,0,Not Graduate
+A00608,Female,Yes,3+,Graduate
+A00609,Female,Yes,1,Graduate
+A00610,Female,No,0,Not Graduate
+A00611,Male,Yes,3+,Not Graduate
+A00612,Male,Yes,0,Graduate
+A00613,Female,Yes,1,Graduate
+A00614,Male,Yes,0,Not Graduate
+A00615,Female,Yes,1,Not Graduate
+A00616,Male,Yes,2,Graduate
+A00617,Male,Yes,2,Graduate
+A00618,Male,Yes,1,Not Graduate
+A00619,Female,No,2,Graduate
+A00620,Male,Yes,0,Not Graduate
+A00621,Female,Yes,1,Graduate
+A00622,Male,Yes,1,Graduate
+A00623,Male,No,2,Graduate
+A00624,Male,No,0,Graduate
+A00625,Male,No,2,Not Graduate
+A00626,Female,Yes,1,Not Graduate
+A00627,Female,No,3+,Graduate
+A00628,Male,No,0,Not Graduate
+A00629,Female,No,1,Graduate
+A00630,Male,Yes,0,Not Graduate
+A00631,Female,No,2,Graduate
+A00632,Male,Yes,0,Not Graduate
+A00633,Female,No,2,Graduate
+A00634,Female,No,2,Not Graduate
+A00635,Female,No,1,Graduate
+A00636,Male,No,1,Not Graduate
+A00637,Male,Yes,1,Graduate
+A00638,Male,Yes,2,Graduate
+A00639,Male,Yes,3+,Graduate
+A00640,Male,Yes,0,Not Graduate
+A00641,Male,Yes,1,Graduate
+A00642,Male,No,1,Not Graduate
+A00643,Female,No,1,Not Graduate
+A00644,Male,Yes,0,Not Graduate
+A00645,Male,No,0,Graduate
+A00646,Male,Yes,0,Not Graduate
+A00647,Female,Yes,2,Not Graduate
+A00648,Male,Yes,3+,Not Graduate
+A00649,Female,Yes,0,Not Graduate
+A00650,Female,No,1,Graduate
+A00651,Female,No,3+,Not Graduate
+A00652,Male,No,3+,Not Graduate
+A00653,Female,Yes,3+,Graduate
+A00654,Female,Yes,2,Not Graduate
+A00655,Male,Yes,3+,Not Graduate
+A00656,Male,No,0,Graduate
+A00657,Female,Yes,3+,Not Graduate
+A00658,Male,No,0,Graduate
+A00659,Female,Yes,3+,Not Graduate
+A00660,Female,No,1,Not Graduate
+A00661,Female,No,2,Graduate
+A00662,Female,No,2,Graduate
+A00663,Male,Yes,3+,Not Graduate
+A00664,Female,Yes,2,Graduate
+A00665,Male,Yes,0,Graduate
+A00666,Female,Yes,3+,Graduate
+A00667,Female,Yes,3+,Graduate
+A00668,Male,Yes,3+,Graduate
+A00669,Male,No,1,Not Graduate
+A00670,Female,Yes,1,Not Graduate
+A00671,Male,No,2,Not Graduate
+A00672,Female,Yes,3+,Not Graduate
+A00673,Female,Yes,0,Graduate
+A00674,Female,No,3+,Graduate
+A00675,Female,No,1,Graduate
+A00676,Female,Yes,0,Graduate
+A00677,Female,No,2,Not Graduate
+A00678,Male,Yes,0,Not Graduate
+A00679,Female,Yes,2,Not Graduate
+A00680,Female,Yes,3+,Graduate
+A00681,Male,Yes,2,Not Graduate
+A00682,Male,Yes,0,Graduate
+A00683,Male,Yes,3+,Graduate
+A00684,Male,Yes,0,Not Graduate
+A00685,Female,No,2,Not Graduate
+A00686,Female,No,1,Not Graduate
+A00687,Female,Yes,3+,Not Graduate
+A00688,Male,No,1,Graduate
+A00689,Female,No,1,Graduate
+A00690,Male,Yes,2,Graduate
+A00691,Female,No,1,Not Graduate
+A00692,Female,No,1,Not Graduate
+A00693,Male,No,0,Not Graduate
+A00694,Female,No,2,Graduate
+A00695,Male,No,1,Graduate
+A00696,Male,Yes,3+,Not Graduate
+A00697,Male,Yes,0,Not Graduate
+A00698,Male,Yes,2,Not Graduate
+A00699,Male,No,1,Not Graduate
+A00700,Female,No,3+,Not Graduate
+A00701,Female,Yes,0,Graduate
+A00702,Male,Yes,0,Not Graduate
+A00703,Male,No,1,Graduate
+A00704,Female,No,2,Not Graduate
+A00705,Male,Yes,0,Not Graduate
+A00706,Male,Yes,1,Graduate
+A00707,Female,Yes,0,Not Graduate
+A00708,Male,Yes,2,Graduate
+A00709,Male,Yes,0,Graduate
+A00710,Male,Yes,3+,Not Graduate
+A00711,Female,No,2,Graduate
+A00712,Female,No,1,Graduate
+A00713,Male,No,1,Graduate
+A00714,Female,Yes,1,Not Graduate
+A00715,Female,Yes,0,Graduate
+A00716,Female,Yes,2,Not Graduate
+A00717,Female,No,3+,Not Graduate
+A00718,Female,Yes,1,Not Graduate
+A00719,Male,No,0,Not Graduate
+A00720,Male,Yes,0,Graduate
+A00721,Female,No,0,Not Graduate
+A00722,Female,Yes,2,Graduate
+A00723,Male,Yes,2,Graduate
+A00724,Female,Yes,3+,Not Graduate
+A00725,Female,No,0,Graduate
+A00726,Female,No,1,Not Graduate
+A00727,Female,Yes,2,Not Graduate
+A00728,Male,No,1,Not Graduate
+A00729,Female,No,3+,Not Graduate
+A00730,Male,No,0,Not Graduate
+A00731,Male,No,0,Not Graduate
+A00732,Female,Yes,0,Graduate
+A00733,Male,Yes,0,Graduate
+A00734,Male,Yes,3+,Not Graduate
+A00735,Male,No,1,Not Graduate
+A00736,Male,No,0,Graduate
+A00737,Female,Yes,1,Not Graduate
+A00738,Male,No,1,Graduate
+A00739,Female,No,0,Graduate
+A00740,Female,No,3+,Not Graduate
+A00741,Male,Yes,1,Not Graduate
+A00742,Female,No,0,Not Graduate
+A00743,Female,No,3+,Graduate
+A00744,Male,No,3+,Graduate
+A00745,Male,Yes,1,Not Graduate
+A00746,Male,No,0,Graduate
+A00747,Male,No,1,Graduate
+A00748,Male,No,3+,Graduate
+A00749,Male,Yes,3+,Graduate
+A00750,Male,Yes,2,Graduate
+A00751,Male,No,3+,Not Graduate
+A00752,Male,Yes,3+,Graduate
+A00753,Female,No,2,Not Graduate
+A00754,Female,Yes,2,Not Graduate
+A00755,Male,No,2,Graduate
+A00756,Female,No,2,Not Graduate
+A00757,Female,No,0,Graduate
+A00758,Female,No,2,Not Graduate
+A00759,Female,Yes,2,Graduate
+A00760,Female,No,2,Not Graduate
+A00761,Male,No,0,Not Graduate
+A00762,Male,Yes,3+,Not Graduate
+A00763,Female,Yes,2,Graduate
+A00764,Female,No,3+,Graduate
+A00765,Male,Yes,3+,Not Graduate
+A00766,Female,No,2,Not Graduate
+A00767,Male,Yes,0,Not Graduate
+A00768,Female,No,2,Graduate
+A00769,Male,No,2,Not Graduate
+A00770,Female,Yes,3+,Not Graduate
+A00771,Female,Yes,2,Graduate
+A00772,Male,Yes,2,Graduate
+A00773,Female,No,0,Graduate
+A00774,Female,Yes,1,Not Graduate
+A00775,Female,No,1,Not Graduate
+A00776,Female,Yes,2,Not Graduate
+A00777,Female,Yes,3+,Not Graduate
+A00778,Male,Yes,3+,Graduate
+A00779,Female,Yes,2,Not Graduate
+A00780,Female,Yes,1,Not Graduate
+A00781,Male,No,3+,Not Graduate
+A00782,Male,Yes,1,Not Graduate
+A00783,Male,No,2,Not Graduate
+A00784,Male,Yes,0,Not Graduate
+A00785,Male,Yes,0,Not Graduate
+A00786,Male,Yes,0,Graduate
+A00787,Female,No,2,Graduate
+A00788,Male,Yes,1,Graduate
+A00789,Female,No,1,Not Graduate
+A00790,Male,No,0,Not Graduate
+A00791,Female,Yes,2,Not Graduate
+A00792,Female,Yes,2,Not Graduate
+A00793,Male,No,2,Graduate
+A00794,Female,Yes,1,Not Graduate
+A00795,Male,Yes,2,Not Graduate
+A00796,Female,No,0,Not Graduate
+A00797,Male,Yes,2,Graduate
+A00798,Male,No,2,Not Graduate
+A00799,Female,Yes,2,Graduate
+A00800,Male,No,2,Not Graduate
+A00801,Female,Yes,0,Not Graduate
+A00802,Male,Yes,3+,Not Graduate
+A00803,Male,No,0,Not Graduate
+A00804,Male,No,2,Graduate
+A00805,Male,No,1,Graduate
+A00806,Female,Yes,3+,Not Graduate
+A00807,Male,No,0,Graduate
+A00808,Female,No,0,Not Graduate
+A00809,Male,No,0,Graduate
+A00810,Female,No,1,Graduate
+A00811,Male,No,3+,Graduate
+A00812,Female,No,3+,Not Graduate
+A00813,Male,Yes,0,Not Graduate
+A00814,Female,Yes,1,Graduate
+A00815,Male,Yes,1,Graduate
+A00816,Female,Yes,3+,Graduate
+A00817,Male,Yes,1,Not Graduate
+A00818,Male,Yes,1,Not Graduate
+A00819,Male,No,3+,Graduate
+A00820,Male,Yes,1,Not Graduate
+A00821,Female,No,0,Graduate
+A00822,Female,No,2,Graduate
+A00823,Female,No,2,Not Graduate
+A00824,Male,No,1,Graduate
+A00825,Female,No,3+,Graduate
+A00826,Female,No,0,Not Graduate
+A00827,Male,Yes,3+,Graduate
+A00828,Female,No,0,Not Graduate
+A00829,Male,No,0,Not Graduate
+A00830,Female,No,0,Not Graduate
+A00831,Female,Yes,0,Not Graduate
+A00832,Female,Yes,3+,Graduate
+A00833,Female,No,1,Not Graduate
+A00834,Female,No,0,Graduate
+A00835,Male,No,1,Not Graduate
+A00836,Male,Yes,0,Graduate
+A00837,Female,No,1,Not Graduate
+A00838,Male,Yes,3+,Graduate
+A00839,Female,Yes,1,Graduate
+A00840,Male,Yes,0,Not Graduate
+A00841,Female,No,0,Not Graduate
+A00842,Female,Yes,0,Graduate
+A00843,Female,No,3+,Graduate
+A00844,Male,Yes,2,Not Graduate
+A00845,Male,Yes,1,Not Graduate
+A00846,Male,No,0,Not Graduate
+A00847,Female,Yes,0,Not Graduate
+A00848,Female,Yes,2,Not Graduate
+A00849,Female,No,3+,Not Graduate
+A00850,Female,No,2,Not Graduate
+A00851,Female,No,0,Graduate
+A00852,Male,Yes,1,Not Graduate
+A00853,Male,No,2,Not Graduate
+A00854,Male,No,0,Graduate
+A00855,Female,Yes,0,Not Graduate
+A00856,Male,Yes,2,Graduate
+A00857,Male,Yes,3+,Graduate
+A00858,Male,No,1,Not Graduate
+A00859,Male,Yes,0,Not Graduate
+A00860,Male,Yes,2,Graduate
+A00861,Male,Yes,2,Not Graduate
+A00862,Female,No,3+,Graduate
+A00863,Male,Yes,1,Graduate
+A00864,Male,Yes,3+,Graduate
+A00865,Male,Yes,1,Not Graduate
+A00866,Male,No,3+,Graduate
+A00867,Male,No,3+,Not Graduate
+A00868,Male,No,3+,Graduate
+A00869,Female,No,1,Not Graduate
+A00870,Female,Yes,1,Graduate
+A00871,Male,Yes,3+,Graduate
+A00872,Male,No,3+,Not Graduate
+A00873,Female,No,2,Not Graduate
+A00874,Female,Yes,0,Not Graduate
+A00875,Female,No,0,Not Graduate
+A00876,Male,Yes,1,Not Graduate
+A00877,Male,No,1,Not Graduate
+A00878,Female,No,2,Graduate
+A00879,Female,No,3+,Not Graduate
+A00880,Male,No,0,Not Graduate
+A00881,Male,Yes,1,Graduate
+A00882,Male,Yes,2,Graduate
+A00883,Female,Yes,1,Graduate
+A00884,Female,Yes,1,Graduate
+A00885,Male,No,0,Not Graduate
+A00886,Male,Yes,1,Graduate
+A00887,Male,Yes,1,Graduate
+A00888,Female,No,2,Not Graduate
+A00889,Female,No,3+,Not Graduate
+A00890,Female,No,1,Graduate
+A00891,Female,No,2,Not Graduate
+A00892,Female,Yes,1,Graduate
+A00893,Female,Yes,3+,Not Graduate
+A00894,Male,Yes,0,Not Graduate
+A00895,Male,No,0,Not Graduate
+A00896,Male,No,0,Graduate
+A00897,Male,Yes,3+,Graduate
+A00898,Male,No,2,Not Graduate
+A00899,Male,Yes,2,Graduate
+A00900,Male,Yes,0,Not Graduate
+A00901,Female,No,1,Not Graduate
+A00902,Female,Yes,1,Not Graduate
+A00903,Male,No,2,Not Graduate
+A00904,Female,No,0,Not Graduate
+A00905,Female,No,0,Not Graduate
+A00906,Female,Yes,0,Graduate
+A00907,Female,No,2,Graduate
+A00908,Male,No,1,Graduate
+A00909,Male,Yes,2,Graduate
+A00910,Female,Yes,0,Graduate
+A00911,Male,Yes,2,Not Graduate
+A00912,Female,Yes,1,Graduate
+A00913,Female,No,3+,Graduate
+A00914,Female,Yes,3+,Graduate
+A00915,Male,Yes,3+,Not Graduate
+A00916,Male,Yes,2,Not Graduate
+A00917,Female,No,1,Graduate
+A00918,Female,No,3+,Graduate
+A00919,Male,No,0,Graduate
+A00920,Female,Yes,3+,Graduate
+A00921,Female,No,3+,Not Graduate
+A00922,Female,No,2,Not Graduate
+A00923,Female,Yes,1,Graduate
+A00924,Female,Yes,0,Graduate
+A00925,Male,No,1,Not Graduate
+A00926,Female,Yes,0,Not Graduate
+A00927,Male,No,3+,Not Graduate
+A00928,Female,Yes,0,Graduate
+A00929,Male,No,2,Not Graduate
+A00930,Male,Yes,1,Graduate
+A00931,Female,Yes,2,Not Graduate
+A00932,Female,No,3+,Graduate
+A00933,Female,Yes,3+,Not Graduate
+A00934,Female,Yes,2,Graduate
+A00935,Female,Yes,0,Graduate
+A00936,Male,Yes,2,Graduate
+A00937,Female,No,0,Graduate
+A00938,Female,Yes,0,Graduate
+A00939,Female,No,1,Not Graduate
+A00940,Female,Yes,3+,Not Graduate
+A00941,Female,No,1,Graduate
+A00942,Male,No,0,Not Graduate
+A00943,Female,No,2,Graduate
+A00944,Male,Yes,2,Graduate
+A00945,Female,No,1,Graduate
+A00946,Female,Yes,1,Graduate
+A00947,Female,No,2,Graduate
+A00948,Male,No,3+,Graduate
+A00949,Male,Yes,3+,Graduate
+A00950,Male,No,2,Graduate
+A00951,Male,No,1,Not Graduate
+A00952,Male,No,3+,Graduate
+A00953,Female,No,2,Graduate
+A00954,Male,Yes,3+,Graduate
+A00955,Female,Yes,2,Not Graduate
+A00956,Female,Yes,0,Not Graduate
+A00957,Male,Yes,1,Not Graduate
+A00958,Female,No,3+,Graduate
+A00959,Female,Yes,3+,Graduate
+A00960,Male,No,2,Graduate
+A00961,Female,No,1,Not Graduate
+A00962,Male,Yes,2,Graduate
+A00963,Male,Yes,2,Not Graduate
+A00964,Female,Yes,2,Graduate
+A00965,Female,Yes,2,Not Graduate
+A00966,Male,Yes,2,Graduate
+A00967,Male,Yes,1,Not Graduate
+A00968,Male,No,2,Not Graduate
+A00969,Male,No,1,Not Graduate
+A00970,Male,No,0,Not Graduate
+A00971,Female,Yes,1,Not Graduate
+A00972,Female,No,1,Graduate
+A00973,Male,Yes,2,Not Graduate
+A00974,Male,No,3+,Graduate
+A00975,Male,No,2,Not Graduate
+A00976,Female,No,3+,Graduate
+A00977,Female,No,3+,Not Graduate
+A00978,Male,No,3+,Graduate
+A00979,Female,No,1,Not Graduate
+A00980,Female,Yes,0,Not Graduate
+A00981,Male,No,0,Graduate
+A00982,Male,No,1,Not Graduate
+A00983,Male,No,2,Graduate
+A00984,Female,No,2,Graduate
+A00985,Female,Yes,2,Graduate
+A00986,Female,Yes,2,Graduate
+A00987,Female,Yes,2,Graduate
+A00988,Male,Yes,0,Graduate
+A00989,Female,No,0,Not Graduate
+A00990,Female,Yes,1,Not Graduate
+A00991,Female,No,3+,Graduate
+A00992,Female,No,0,Graduate
+A00993,Female,No,3+,Not Graduate
+A00994,Male,No,0,Graduate
+A00995,Male,No,0,Not Graduate
+A00996,Male,Yes,3+,Not Graduate
+A00997,Female,Yes,1,Not Graduate
+A00998,Male,Yes,0,Not Graduate
+A00999,Male,No,0,Graduate
+A01000,Male,No,2,Not Graduate
